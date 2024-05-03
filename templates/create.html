@@ -1,0 +1,58 @@
+{% extends 'base.html'%}
+
+{% block head %}
+<h1>Create Customer</h1>
+{% endblock head %}
+
+{% block body %}
+
+<form action="/create/" method="POST">
+    <table>
+        <tr>
+            <td>
+                <label>Customer Name</label>
+            </td>
+            <td>
+                <input name="customerName" type="text" placeholder="customerName">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Address</label>
+            </td>
+            <td>
+                <input name="address" type="text" placeholder="address">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>City</label>
+            </td>
+            <td>
+                <input name="city" type="text" placeholder="city">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>State</label>
+            </td>
+            <td>
+                <input name="state" type="text" placeholder="state">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Comments</label>
+            </td>
+            <td>
+                <input name="comments" type="text" placeholder="comments">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input name="save" type="submit" value="Save">
+            </td>
+        </tr>
+    </table>
+</form>
+{% endblock body %}

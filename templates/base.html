@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Flask App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css' ) }}" class="rel">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dreamer.css' ) }}" class="rel">
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header">
+            <h1 id="logo-text">Dreamer Inc</h1>
+            <h2 id="slogan">Demo Python Django App</h2>
+            <div id="header-links">
+                <nav>
+                    <a href="/">Home</a> |
+                    <a href="/about">About</a> |
+                    <a href="/create">Create</a> |
+                    <a href="/update">Update</a> |
+                </nav>
+            </div>
+        </div>
+        <main>
+            {% block head %}
+            {% endblock head%}
+            <br>
+            <br>
+            {% block body %}
+            {% endblock body %}
+        </main>
+        <div id="footer">
+            <p> &copy; 2024 <strong>Dreamer Inc</strong></p>
+        </div>
+    </div>
+</body>
+
+</html>

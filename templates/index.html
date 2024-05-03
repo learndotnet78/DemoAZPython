@@ -1,0 +1,30 @@
+{% extends 'base.html'%}
+
+{% block head %}
+<h1>Customer Lists</h1>
+{% endblock head %}
+
+{% block body %}
+<table>
+    <thead>
+        <td>Customer Id</td>
+        <td>Customer Name</td>
+        <td>Address</td>
+        <td>City</td>
+        <td>State</td>
+        <td>Comments</td>
+        <td>Edit</td>
+    </thead>
+    {% for customer in customers %}
+    <tr>
+        <td>{{ customer.CustomerID}}</td>
+        <td>{{ customer.CustomerName}}</td>
+        <td>{{ customer.Address}}</td>
+        <td>{{ customer.City}}</td>
+        <td>{{ customer.State}}</td>
+        <td>{{ customer.Comments}}</td>
+        <td><a href="/update/{{ customer.CustomerID }}">Edit</a></td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock body %}

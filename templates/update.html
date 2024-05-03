@@ -1,0 +1,67 @@
+{% extends 'base.html'%}
+
+{% block head %}
+<h1>Update Customer</h1>
+{% endblock head %}
+
+{% block body %}
+<form action="/updateData/" method="POST">
+    {% for row in customer %}
+    <table>
+        <tr>
+            <td>
+                <label>Customer ID</label>
+            </td>
+            <td>
+                <input name="customerID" type="text" placeholder="customerID" value="{{ row[0] }}">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Customer Name</label>
+            </td>
+            <td>
+                <input name="customerName" type="text" placeholder="customerName" value="{{ row[1] }}">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Address</label>
+            </td>
+            <td>
+                <input name="address" type="text" placeholder="address" value="{{ row[2] }}">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>City</label>
+            </td>
+            <td>
+                <input name="city" type="text" placeholder="city" value="{{ row[3] }}">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>State</label>
+            </td>
+            <td>
+                <input name="state" type="text" placeholder="state" value="{{ row[4] }}">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Comments</label>
+            </td>
+            <td>
+                <input name="comments" type="text" placeholder="comments" value="{{ row[5] }}">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input name="save" type="submit" value="Save">
+            </td>
+        </tr>
+    </table>
+    {% endfor %}
+</form>
+{% endblock body %}
